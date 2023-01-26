@@ -56,7 +56,7 @@ export const Post = ({
 			{imageUrl && (
 				<img
 					className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
-					src={imageUrl ? `http://localhost:4444/${imageUrl}` : ""}
+					src={imageUrl ? `${process.env.REACT_APP_API_URL}${imageUrl}` : ""}
 					alt={title}
 				/>
 			)}
